@@ -1,0 +1,274 @@
+.top-banner{
+    display:flex;
+    font-size:medium;
+    background-color:#ff3411;
+    flex-direction:row;
+    align-items: center;
+    height:50px;
+    justify-content: space-around;
+}
+
+.top-banner p{
+    margin:0;
+    font-weight:400;   
+}
+
+.banner-content{
+    display:flex;
+    gap:20px;
+    font-size:small;
+    color:white;
+    height:100%;
+    align-items: center;
+}
+
+.donate-btn{
+    border:none;
+    height:100%;
+    color:white;
+    background: rgb(30, 30, 30);
+    padding-left:30px;
+    padding-right:30px;
+}
+
+.nav-ul{
+    display:flex;
+    justify-content: end;
+    width:70%;
+    gap:10%;
+}
+
+.nav-ul a:hover{
+    color:#ff3411;
+}
+
+.nav-ul li{
+    position:relative;
+}
+
+.nav-ul li::after{
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: #ff3411;;
+    z-index: 100;
+}
+
+.nav-ul li:hover::after{
+    width:100%;
+}
+
+.active{
+    color:#ff3411;
+}
+
+#myCarousel{
+    height:200px;
+}
+
+.carousel{
+    height:min-content;
+}
+
+.carousel-inner,.carousel-item{
+    height:min-content;
+}
+
+.carousel-slide{
+    color:black;
+    position:relative;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding-top:100px;
+    padding-bottom:150px;
+    height:min-content;
+}
+.carousel-slide::before{
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    content:'';
+    background-image: url("./images/image.png");
+    background-size:cover;
+    filter:brightness(0.4);
+    z-index:0;
+}
+
+.btn{
+    background-color: black;
+}
+
+.content-div{
+    width:70%;
+    height:60%;
+    margin-bottom:50px;
+    z-index:1;
+}
+
+#main-head{
+    color:white;
+    font-size:6rem;
+    font-weight: 600;
+    margin:0;
+}
+
+.content-div span{
+    font-size:3rem;
+    color:white;
+    font-weight: 600;
+    margin:0;
+}
+
+#D-btn{
+    border:none;
+    color:white;
+    font-weight: 500;
+    padding:15px;
+    padding-left:25px;
+    padding-right:25px;
+    border-radius:30px;
+    background: linear-gradient(270deg, rgba(255, 90, 0, 1) 0%, rgba(255, 54, 0, 1) 100%);
+    margin:10px;
+}
+
+#R-btn{
+    background: none;
+    color:white;
+    font-weight: 500;
+    padding:15px;
+    padding-left:25px;
+    padding-right:25px;
+    border-radius:30px;
+    border-color:#ff5a00;
+    margin:10px;
+}
+
+#R-btn:hover{
+    background: linear-gradient(270deg, rgba(255, 90, 0, 1) 0%, rgba(255, 54, 0, 1) 100%);
+}
+
+.feature{
+    min-width:300px;
+    height:max-content;
+    margin:20px;
+    padding:20px;
+    text-align: center;
+    background-color: aliceblue;
+    border-radius: 50px;
+}
+
+.feature #f2-img{
+    display:none;
+}
+
+.feature:hover{
+    background: #ff5a00;
+}
+
+.feature:hover #f1-img{
+    display:none;
+}
+
+.feature:hover #f2-img{
+    display:block;
+}
+
+.feature:hover h3,.feature:hover p{
+    color:white;
+}
+
+.about{
+    position:relative;
+    width:100%;
+    height:auto;
+    margin-top:50px;
+    margin-bottom:50px;
+    display:flex;
+    justify-content: center;
+}
+
+.about::before{
+    content:'';
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    position:absolute;
+    background-image: url("images/image.png");
+    background-size:cover;
+    filter:brightness(0.2);
+    z-index:-1;
+}
+
+.about-con{
+    display:flex;
+    flex-wrap:wrap-reverse;
+    justify-content:space-between;
+    gap:50px;
+    width:80%;
+    height: 100%;
+    z-index:0;
+    margin-top:50px;
+    margin-bottom:50px;
+}
+.about-con h1{
+    position:relative;
+    margin:10px;
+    color:white;
+}
+
+.about-con h1::after{
+    content:'';
+    position:absolute;
+    width:30%;
+    height:5px;
+    left:0;
+    bottom:-10px;
+    border-radius:20px;
+    background-color: red;
+}
+
+.about-con p{
+    margin:10px;
+    margin-top:50px;
+    margin-bottom:50px;
+    color:rgb(175, 175, 175);
+}
+
+.con{
+    width:50%;
+}
+
+.wel-img{
+    width:100%;
+    height:100%;
+}
+
+@media(max-width:992px){
+    .navbar-collapse{
+        width:100%;
+        height:max-content;
+        position:absolute;
+        right:0;
+        top:55px;
+        padding-left:10px;
+        background:white;
+        z-index:100;
+   }
+}
+
+@media(max-width:1520px){
+   .welImg-con{
+        width:100%;
+        height:400px;
+   }
+   .con{
+        width:100%;
+   }
+}
